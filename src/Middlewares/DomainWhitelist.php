@@ -17,14 +17,14 @@ class DomainWhitelist
     {
         $whitelist = config('domain-whitelist');
 
-        if (!empty($whitelist['domains']) && !in_array($request->getRequestUri(), $whitelist['excludes'])) {
+        if (! empty($whitelist['domains']) && ! in_array($request->getRequestUri(), $whitelist['excludes'])) {
             $domain = parse_url($request->headers->get('origin') ?? $request->headers->get('referer'), PHP_URL_HOST);
 
-            if (!empty($domain) && !$this->isValidDomain($domain, $whitelist['domains'])) {
+            if (! empty($domain) && ! $this->isValidDomain($domain, $whitelist['domains'])) {
                 $info = [
-                    'host'  => $domain,
-                    'ip'    => $request->getClientIp(),
-                    'url'   => $request->getRequestUri(),
+                    'host' => $domain,
+                    'ip' => $request->getClientIp(),
+                    'url' => $request->getRequestUri(),
                     'agent' => $request->header('User-Agent'),
                 ];
 

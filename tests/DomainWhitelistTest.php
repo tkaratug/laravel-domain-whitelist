@@ -25,7 +25,8 @@ class DomainWhitelistTest extends TestCase
 
         $middleware = new DomainWhitelist();
 
-        $response = $middleware->handle($request, function() {});
+        $response = $middleware->handle($request, function () {
+        });
 
         $this->assertNull($response);
     }
@@ -43,7 +44,8 @@ class DomainWhitelistTest extends TestCase
 
         $middleware = new DomainWhitelist();
 
-        $response = $middleware->handle($request, function() {});
+        $response = $middleware->handle($request, function () {
+        });
 
         $this->assertNull($response);
     }
@@ -59,7 +61,8 @@ class DomainWhitelistTest extends TestCase
 
         $middleware = new DomainWhitelist();
 
-        $response = $middleware->handle($request, function() {});
+        $response = $middleware->handle($request, function () {
+        });
 
         $this->assertNull($response);
     }
