@@ -1,22 +1,22 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "tkaratug/laravel-domain-whitelist",
+    "description": "A domain wwhitelist checker middleware.",
     "keywords": [
-        ":vendor_name",
+        "tkaratug",
         "laravel",
-        "package_slug"
+        "laravel-domain-whitelist"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/tkaratug/laravel-domain-whitelist",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Turan Karatuğ",
+            "email": "tkaratug@hotmail.com.tr",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^7.4 || ^8.0",
         "spatie/laravel-package-tools": "^1.4.3",
         "illuminate/contracts": "^8.37"
     },
@@ -30,13 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Tkaratug\\LaravelDomainWhitelist\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Tkaratug\\LaravelDomainWhitelist\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,11 +49,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
-            }
+                "Tkaratug\\LaravelDomainWhitelist\\LaravelDomainWhitelistServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
