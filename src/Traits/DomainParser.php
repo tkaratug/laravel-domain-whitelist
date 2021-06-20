@@ -31,7 +31,7 @@ trait DomainParser
         }
 
         return [
-            'domain'    => $domain,
+            'domain' => $domain,
             'subdomain' => rtrim(strstr($fullDomain, $domain, true), '.'),
         ];
     }
@@ -60,5 +60,4 @@ trait DomainParser
 
         return false;
     }
-
 }
