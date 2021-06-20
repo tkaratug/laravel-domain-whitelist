@@ -48,7 +48,7 @@ return [
 ```
 ---
 ## Usage
-Packages comes with DomainWhitelist middleware. You can register it in `$routeMiddleware` in `app/Http/Kernel.php` file:
+Packages comes with `DomainWhitelist` middleware. You can register it in `$routeMiddleware` in `app/Http/Kernel.php` file:
 
 ```php
 protected $routeMiddleware = [
